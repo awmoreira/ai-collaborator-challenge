@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+
+
+  >span:nth-child(2) {
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 15px;
+  }
+
+  >span:nth-child(3) {
+    color: #000;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 15px;
+  }
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  :nth-child(1) {
+    color: #000;
+    font-size: 98px;
+    font-weight: 600;
+  }
+
+  :nth-child(3) {
+    color: #000;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 11px 0;
+  }
+
+  :nth-child(6) {
+    color: #000;
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  :nth-child(7) {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 4px 0;
+  }
+}
+
+.humidity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 11px 0;
+
+  :nth-child(2) {
+    color: #000;
+    font-size: 21px;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+}
+
+.wind {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 25px;
+  margin: 11px 0;
+
+  :nth-child(2) {
+    color: #000;
+    font-size: 21px;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.wrapper-tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 360px;
+  padding: 0 20px;
+}
+
+.tag {
+  width: 75px;
+  height: 129px;
+  background-color: #fff;
+  border-radius: 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  :nth-child(2) {
+    color: #000;
+    font-size: 11px;
+    font-weight: 400;
+    margin: 4px 0;
+  }
+
+  :nth-child(4) {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 4px 0;
+  }
+}
+
+.divider {
+  width: 36px;
+  height: 1px;
+  background-color: #000;
+}
