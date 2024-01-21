@@ -30,7 +30,7 @@ function App() {
     return <Error message={error?.message} />;
   }
 
-  const dayWeek = format(new Date(data?.dt * 1000), "EEEE");
+  const dayWeek = format(new Date(Number(data?.dt) * 1000), "EEEE");
 
   return (
     <div className="container">
