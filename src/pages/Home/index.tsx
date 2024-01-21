@@ -70,7 +70,7 @@ function Home({ data, dayWeek, setCity, unit, setUnit }: IHome) {
           <span>{data?.wind.speed} mph</span>
         </div>
         <span>{dayWeek?.charAt(0).toUpperCase() + dayWeek?.slice(1)}</span>
-        <span>{formatTz(new Date(data?.dt * 1000), "MM/dd/yyyy")}</span>
+        <span>{formatTz(new Date(Number(data?.dt) * 1000), "MM/dd/yyyy")}</span>
       </div>
       <div className="bottom">
         <div className="wrapper-tags">
