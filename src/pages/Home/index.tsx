@@ -1,5 +1,5 @@
 import "./styles.css";
-import { IconDefinition, icon } from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { format as formatTz } from "date-fns-tz";
 import { format } from "date-fns";
 import { WeatherCondition, weatherConditions } from "../../utils/icons";
@@ -23,8 +23,7 @@ interface IHome {
   error: { isError: boolean; errorMessage: string | undefined };
 }
 
-function Home({ data, setCity, unit, setUnit, error }: IHome) {
-  console.log("🚀 ~ Home ~ error:", error);
+function Home({ data, setCity, unit, setUnit, error }: IHome) {  
   const handleSearch = (query: string) => {
     if (query.length > 2) {
       setCity(query);
