@@ -6,3 +6,50 @@
   background-color: #EFB742;
   position: relative;
 }
+
+.footer-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50vh;
+  width: auto;
+
+}
+
+@media screen and (max-width: 1600px) {
+  .footer-image {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 1472px) {
+  .footer-image {
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 1096px) {
+  .footer-image {
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 846px) {
+  .footer-image {
+    height: 15vh;
+  }
+}
+@media screen and (max-width: 729px) {
+  .footer-image {
+    display: none;
+  }
+}
+
+/* @media screen and (min-width: 601px) and (max-width: 900px) {
+  .footer-image {
+    height: 10vh;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .footer-image {
+    height: 20vh;
+  }
+} */

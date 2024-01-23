@@ -5,6 +5,7 @@ import { useGetWeather } from "./hooks/useGetWheather";
 import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
+import Footer from './assets/footer.png'
 
 function App() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function App() {
           errorMessage: location?.error ?? error?.message
         }}
       />
+      <img className="footer-image" src={Footer} alt="" />
     </div>
   );
 }
