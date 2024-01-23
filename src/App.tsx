@@ -1,9 +1,8 @@
 import "./App.css";
-import { format } from "date-fns";
+
 import { useLocation } from "./hooks/useLocation";
 import { useGetWeather } from "./hooks/useGetWheather";
 import Loading from "./components/Loading";
-import Error from "./components/Error";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
 
@@ -26,20 +25,17 @@ function App() {
     return <Loading />;
   }
 
-  if (isError || data === undefined || data === null) {
-    return <Error message={error?.message} />;
-  }
-
-  const dayWeek = format(new Date(Number(data?.dt) * 1000), "EEEE");
-
   return (
     <div className="container">
       <Home
-        data={data}
-        dayWeek={dayWeek}
+        data={data}        
         setCity={setCity}
         unit={unit}
         setUnit={setUnit}
+        error={{
+          isError,
+          errorMessage: location?.error ?? error?.message
+        }}
       />
     </div>
   );

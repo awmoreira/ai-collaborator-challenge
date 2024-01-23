@@ -1,16 +1,22 @@
-import React from "react";
-import "./styles.css";
+import React, { useEffect, useState } from "react";
+import "./styles.css"
 
 interface ErrorProps {
   message: string | undefined;
 }
 
-const ErrorComponent: React.FC<ErrorProps> = ({ message }) => {
-  return (
-    <div className="error-container">
-      <p className="error-message">{message}</p>
-    </div>
-  );
+const Error: React.FC<ErrorProps> = ({ message }) => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return isVisible && <div className="error-message">{message}</div>;
 };
 
-export default ErrorComponent;
+export default Error;

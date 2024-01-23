@@ -18,7 +18,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
     <div className="search-input-container">
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Choose a city..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
