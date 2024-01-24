@@ -16,7 +16,7 @@ const Error: React.FC<ErrorProps> = ({ message }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  return isVisible && <div className="error-message">{message}</div>;
+  return isVisible && <div className="error-message" data-testid="error-message">{message}</div>;
 };
 
 export default Error;
