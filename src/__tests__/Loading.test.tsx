@@ -10,9 +10,9 @@ describe("Loading Component", () => {
   it("renders with default message", () => {
     render(<Loading />);
 
-    expect(screen.getByText("Loading...")).toBeInTheDocument();
+    expect(screen.getByText("Loading...")).toBeDefined();
 
-    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
+    expect(screen.getByTestId("loading-spinner")).toBeDefined();
   });
 
   it("renders with custom message", () => {
@@ -20,10 +20,8 @@ describe("Loading Component", () => {
 
     render(<Loading message={customMessage} />);
 
-    // Ensure the custom loading message is present
-    expect(screen.getByText(customMessage)).toBeInTheDocument();
+    expect(screen.getByText(customMessage)).toBeDefined();
 
-    // Ensure the loading spinner is present
-    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
+    expect(screen.getByTestId("loading-spinner")).toBeDefined();
   });
 });
